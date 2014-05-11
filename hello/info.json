@@ -3,6 +3,5 @@
 	"jsFiles":[
 		"abstract.js",
 		"main.js"
-	],
-	"about":"about.md"
+	]
 }
