@@ -39,4 +39,4 @@ Once you change a file, either in a demo or in `main.js` itself, you will need t
 
 ## Usage:
 
-See `usage.md`.
+See `USAGE.md`.

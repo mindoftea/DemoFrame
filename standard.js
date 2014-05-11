@@ -11,6 +11,11 @@ var absv=function(x)
 	return Math.abs(x);
 };
 
+var rand=function()
+{
+	return Math.random();
+};
+
 var expo=function(x)
 {
 	return Math.exp(x);
@@ -49,11 +54,6 @@ var pow2=function(x)
 var pow3=function(x)
 {
 	return x*x*x;
-};
-
-var rand=function()
-{
-	return Math.random();
 };
 
 var hypo=function(x,y)
