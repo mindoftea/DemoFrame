@@ -1,0 +1,11 @@
+{
+	"demos":[
+		{
+			"name":"Hello",
+			"url":["hello","Hello","h"],
+			"description":"A simple 'Hello, World!' demo program, for demonstrating the use of this framework. Click to interact.",
+			"summary":"Hello, World!",
+			"location":"hello"
+		}
+	]
+}

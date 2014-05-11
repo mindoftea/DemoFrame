@@ -1,0 +1,8 @@
+{
+	"dpp":1.5,
+	"jsFiles":[
+		"abstract.js",
+		"main.js"
+	],
+	"about":"about.md"
+}
