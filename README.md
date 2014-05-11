@@ -4,6 +4,8 @@ DemoFrame
 
 A lightweight framework and node server for the swift, pure development of Javascript &amp; HTML5 canvas demos.
 
+You can see an instance of it running [here](http://mindoftea.jit.su/demos/h "Demo").
+
 
 ## Philosophy:
 
