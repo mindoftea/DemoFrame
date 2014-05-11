@@ -160,7 +160,13 @@ var callClick=function(){};
 			chronometric();
 			animate=(function()
 			{
-				var request=window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+				var request=window.requestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				function(f)
+				{
+					window.setInterval(f,16);
+				};
 				return function()
 				{
 					request(animate);
