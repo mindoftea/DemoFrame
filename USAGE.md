@@ -1,8 +1,9 @@
 DemoFrame Usage
 ===============
 
+## Browser-side Demo Environment:
 
-## Basics:
+### Basics:
 
 DemoFrame interacts with your code in three basic ways:
  - Slot functions are functions defined and used inside DemoFrame's code. When you redefine them in your demo, they are automatically called when certain conditions are met. They are effectively "slots" for your code.
@@ -10,7 +11,7 @@ DemoFrame interacts with your code in three basic ways:
  - Standard functions, defined in `standard.js`, provide shortcuts for some particularly useful functionality in order to clarify and simplify your code. They are all global functions with four-letter names. You can call them whenever you want.
 
 
-## Slot Functions:
+### Slot Functions:
 
  - `initMain`
      - Called when the user starts the program.
@@ -46,7 +47,7 @@ DemoFrame interacts with your code in three basic ways:
  	 - A function which is called each time the user clicks their mouse.
 
 
-## System Constants:
+### System Constants:
 
  - `wW`
  	 - Holds the actual width of the canvas in CSS pixels.
@@ -92,7 +93,7 @@ DemoFrame interacts with your code in three basic ways:
  	 - holds a 15-digit approximation of pi.
 
 
-## Standard Functions:
+### Standard Functions:
 
  - `absv(x)`
  	 - Shortcut to `Math.abs`.
@@ -158,4 +159,57 @@ DemoFrame interacts with your code in three basic ways:
  	 - Useful for timing.
 
 
+## Server-side:
 
+
+### Demos:
+
+Each demo is stored in its own folder. A list of all of the installed demos is stored in `manifest.json`. Each is defined by a set of JavaScript files, listed, along with basic system information in an `info.json` file.
+
+
+### JavaScript Files:
+
+Are just ordinary JavaScript files. They will be spliced in order into the Demoframe packaging and sent to the browser to be executed.
+
+
+### `manifest.json`:
+
+A list of all of the packages (currently just demos) installed in this instance of DemoFrame. See this example:
+
+```js
+{
+	"demos":[
+		{
+			"name":"Hello",
+			"url":["hello","Hello","h"],
+			"description":"A simple 'Hello, World!' demo program, for demonstrating the use of this framework. Click to interact.",
+			"summary":"Hello, World!",
+			"location":"hello"
+		}
+	]
+}
+```
+
+Here, `"demos"` is an array of objects referring to each demo.
+
+ - `"name"` is the title of the demo. It will appear as the HTML `title` in browsers.
+ - `"url"` is a list of all of the locations at which the demo can be accessed. A URL for a demo will be any of these entries appended to the end of `"my_demo_frame/demos/"`.
+ - `"description"` is a paragraph-length description of your demo.
+ - `"summary"` is a one-line summary of your demo.
+ - `"location"` is the location of the folder containing your demo, relative to `main.js`.
+
+ 
+### `info.json`:
+
+```js
+{
+	"dpp":1.5,
+	"jsFiles":[
+		"abstract.js",
+		"main.js"
+	]
+}
+```
+
+ - `jsFiles` is a list of the locations JS files that make up your demo relative to `info.json`.
+ - `dpp` is the maximum allowable dots-per-pixel of the demo. DemoFrame will automatically increase the resolution of the canvas to match that of the user's screen. (For example, a retina display has a dpp of 2, while a standard display has a dpp of 1.) DemoFrame will not increase the resolution of the canvas above `dpp`; this prevents performance slowdown on high definition devices. Use a high `dpp` on demos that can render their graphics quickly and easily, and a lower `dpp` on more graphics-intensive demos.
