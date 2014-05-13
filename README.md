@@ -40,3 +40,6 @@ Once you change a file, either in a demo or in `main.js` itself, you will need t
 ## Usage:
 
 See `USAGE.md`.
+
+For examples of demos that can be used in DemoFrame, see https://github.com/mindoftea/Waves and https://github.com/mindoftea/Particles.
+
