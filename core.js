@@ -222,6 +222,7 @@ var callClick=function(){};
 			delay=1;
 			if(initLoad[n]!==undefined)
 			{
+				initLoad[n]();
 				if(t-t0>=20)
 				{
 					document.getElementById("progressBox").style.width=60*n/initLoad.length+"%";

@@ -4,6 +4,7 @@ var dt=1;
 var steps=50;
 var particles=[];
 var message="HELLO,WORLD!";
+var gravity=0.004;
 
 var Particle=function(x,y,r,m,f)
 {
@@ -53,6 +54,7 @@ var callClick=function()
 	while(n--)
 	{
 		no=particles[n];
+
 		dx=no.x-userX;
 		dy=no.y-userY;
 		d=hypo(dx,dy);
@@ -61,7 +63,8 @@ var callClick=function()
 		d=15+d*d;
 		no.xa+=100*dx/d;
 		no.ya+=100*dy/d;
-		dx=-no.x-userX;
+
+		dx=no.x+userX;
 		dy=no.y-userY;
 		d=hypo(dx,dy);
 		dx/=d;
@@ -122,6 +125,9 @@ var chronometric=function()
 			d=1.8*((rand()>0.5)?1:-1);
 			no.xa+=d*no.yv;
 			no.ya-=d*no.xv;
+			d=hypo(no.x,no.y);
+			no.xa-=gravity*no.x/d*hypo(no.xv,no.yv);
+			no.ya-=gravity*no.y/d*hypo(no.xv,no.yv);
 		}
 		n=particles.length;
 		while(n--)
