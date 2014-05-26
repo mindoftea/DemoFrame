@@ -9,7 +9,7 @@ You can see an instance of it running here: http://mindoftea.jit.su/demos/h.
 
 ## Philosophy:
 
-One of the great features of JavaScript is the environment it runs in; the browser allows programs to be quickly and easily run by any user, and supplies the programmer with an excellent slate of user interaction: HTML, CSS, and the Canvas. Unfortunately, the browser is also one of the great drawbacks of JavaScript. The DOM is slow, consistent formatting is all but unatainable, and HTML can be downright ugly.
+One of the great features of JavaScript is the environment it runs in; the browser allows programs to be quickly and easily run by any user, and supplies the programmer with an excellent slate of user interaction: HTML, CSS, and the Canvas. Unfortunately, the browser is also one of the great drawbacks of JavaScript. The DOM is slow, consistent formatting is all but unatainable, and HTML code can be downright ugly.
 
 For a developer working on a JavaScript & Canvas demo, the huge capabilities of the web format are an unnecessary burden. Every demo will need a formatted canvas and an animation loop; no demo will need HTML forms or nested text. This framework eliminates boilerplate setup, and allows users to get straight to coding the heart of their demo. DemoFrame is lightweight and efficient so that your demo can use the full power of JavaScript without being encumbered by a heavy interface.
 
