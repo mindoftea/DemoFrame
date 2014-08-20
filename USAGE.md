@@ -134,6 +134,8 @@ DemoFrame interacts with your code in three basic ways:
  	 - Scales a vector `v` by `c` and returns the result.
  - `addi(u,v)`
  	 - Adds two vectors, `u` and `v`, and returns the result.
+ - `subt(u,v)`
+ 	 - Subtracts two vectors, `u` and `v`, and returns the result.
  - `comb(x,u,v)`
  	 - Linearly combines two vectors, `u` and `v`, by a third vector, `x`, and returns the result.
  	 - Returns `x[0] * u + x[1] * v`.
