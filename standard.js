@@ -66,7 +66,7 @@ var norm=function()
 		y=rand();
 		x+=Math.log(y/(1-y))/(231+Math.exp(7.41*(y-0.5))+Math.exp(-7.41*(y-0.5)));
 	}
-	return x;
+	return x/0.0283;
 };
 
 var hypo=function(x,y)
