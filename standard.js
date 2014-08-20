@@ -56,6 +56,19 @@ var pow3=function(x)
 	return x*x*x;
 };
 
+var norm=function()
+{
+	var x,y,n;
+	x=0;
+	n=16;
+	while(n--)
+	{
+		y=rand();
+		x+=Math.log(y/(1-y))/(231+Math.exp(7.41*(y-0.5))+Math.exp(-7.41*(y-0.5)));
+	}
+	return x;
+};
+
 var hypo=function(x,y)
 {
 	return Math.sqrt(x*x+y*y);

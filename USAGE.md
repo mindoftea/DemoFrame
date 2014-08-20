@@ -120,9 +120,12 @@ DemoFrame interacts with your code in three basic ways:
  	 - `-1` if `x` is negative.
  - `pow2(x)`
  	 - Returns `x*x`.
- 	 - Useful for briefly squaring the results of cumbersome expressions without using an extra variable.
+ 	 - Useful for quickly squaring the results of cumbersome expressions without using an extra variable.
  - `pow3(x)`
  	 - Returns `x*x*x`.
+ - `norm(x)`
+ 	 - Returns a random number from a Gaussian distribution.
+ 	 - Useful for distributing a cloud of points in a radially uniform manner while using rectangular coordinates. See [this Stack Exchange post](http://stackoverflow.com/a/8453514/434421).
  - `magn(v)`
  	 - Returns the magnitude of `v`.
  	 - `v` must be a two-vector defined as an array:
